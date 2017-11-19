@@ -1,0 +1,6 @@
+C:\Users\Trevor\git\projects\DockerSamples\cSharp46\source\bin\Release\dotnetapp-4.7.exe.config
+C:\Users\Trevor\git\projects\DockerSamples\cSharp46\source\bin\Release\dotnetapp-4.7.exe
+C:\Users\Trevor\git\projects\DockerSamples\cSharp46\source\bin\Release\dotnetapp-4.7.pdb
+C:\Users\Trevor\git\projects\DockerSamples\cSharp46\source\obj\Release\dotnetApp-4.csprojResolveAssemblyReference.cache
+C:\Users\Trevor\git\projects\DockerSamples\cSharp46\source\obj\Release\dotnetapp-4.7.exe
+C:\Users\Trevor\git\projects\DockerSamples\cSharp46\source\obj\Release\dotnetapp-4.7.pdb
