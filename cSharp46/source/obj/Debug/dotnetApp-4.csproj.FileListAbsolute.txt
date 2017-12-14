@@ -1,1 +1,0 @@
-C:\Users\Trevor\git\projects\DockerSamples\cSharp46\source\bin\Debug\dotnetapp-4.7.exe.config

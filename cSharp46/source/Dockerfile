@@ -1,19 +1,13 @@
-FROM microsoft/dotnet-framework:4.7
+FROM nugardt/msbuild:15.0
+SHELL ["powershell"]
 
-ENV MSBUILD_DOWNLOAD_URL="https://download.microsoft.com/download/E/E/D/EEDF18A8-4AED-4CE0-BEBE-70A83094FC5A/BuildTools_Full.exe"
+WORKDIR /build
 
-RUN powershell -NoProfile -Command " \
-        $ErrorActionPreference = 'Stop'; \
-        Invoke-WebRequest %MSBUILD_DOWNLOAD_URL% -OutFile BuildTools_Full.exe; \
-        ./BuildTools_Full.exe /Silent /Full /NoRestart | Out-Null; \
-        Start-Sleep 2; \
-        Remove-Item -Force BuildTools_Full.exe"
-
-RUN setx /M PATH "%PATH%;%ProgramFiles(x86)%\MSBUILD\14.0\bin"
-
-WORKDIR /app
 COPY . ./
 
-RUN ["msbuild.exe", "dotnetApp-4.csproj", "/p:Configuration=Release"]
+RUN ["nuget.exe", "restore"]
+RUN ["msbuild.exe", "dotnetApp-4.sln", "/p:Configuration=Release", "/m"]
 
-ENTRYPOINT [ "bin/Release/dotnetapp-4.7.exe" ]
+# RUN ["msbuild.exe", "./dotnetApp-4.csproj", "/p:Configuration=Release"]
+RUN ls bin/Release
+ENTRYPOINT [ "bin/Release/dotnetapp-4.62.exe" ]

@@ -4,3 +4,10 @@
 cSharpComposeProject/source/obj/
 
 *.cache
+
+packages/
+obj/
+bin/
+cSharp46/source/\.vs/dotnetApp-4/v15/\.suo
+
+*.ide
