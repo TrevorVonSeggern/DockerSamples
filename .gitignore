@@ -1,0 +1,6 @@
+
+\.vscode/
+
+cSharpComposeProject/source/obj/
+
+*.cache
