@@ -11,3 +11,7 @@ bin/
 cSharp46/source/\.vs/dotnetApp-4/v15/\.suo
 
 *.ide
+
+cSharp46WebProject/\.vs/dotnetApp-4/v15/\.suo
+
+cSharp46WebProject/api/\.vs/api/v15/\.suo
