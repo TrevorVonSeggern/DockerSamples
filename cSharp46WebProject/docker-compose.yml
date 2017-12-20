@@ -4,4 +4,11 @@ services:
     build:
       context: ./api
     ports:
-     - "5000:80"
+     - "8000:8000"
+  db:
+    image: "microsoft/mssql-server-windows-express"
+    ports:
+     - "1433:1433"
+    environment:
+     - sa_password=badpassword
+     - ACCEPT_EULA=Y 
